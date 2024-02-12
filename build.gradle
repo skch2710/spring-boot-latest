@@ -1,6 +1,6 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.2.1'
+	id 'org.springframework.boot' version '3.2.2'
 	id 'io.spring.dependency-management' version '1.1.4'
 }
 
@@ -18,11 +18,18 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	//runtimeOnly 'org.postgresql:postgresql'
+	//implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//For Excel
+	implementation 'org.apache.poi:poi-ooxml:4.1.2'
+	//For pdf
+	implementation 'com.itextpdf:itextpdf:5.5.13'
+	// Swagger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 	compileOnly 'org.projectlombok:lombok'
   	annotationProcessor 'org.projectlombok:lombok'
 	 //implementation 'org.projectlombok:lombok:1.18.30'
 	 //annotationProcessor 'org.projectlombok:lombok:1.18.30'
-	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
